@@ -8,11 +8,11 @@ Number.prototype.pad = function(n) {
 function insertClock() {
     let table = document.querySelector("#contentContainer");
     if(table) {
-        var clock = create('<div id="timedate"><a id="mon">January</a><a id="d">1</a>,<a id="y">0</a><br /><a id="h">12</a>:<a id="m">00</a>:<a id="s">00</a>:    <a id="mi">000</a>');
+        //var clock = create('<div id="timedate"><a id="mon">January</a><a id="d">1</a>,<a id="y">0</a><br /><a id="h">12</a>:<a id="m">00</a>:<a id="s">00</a>:    <a id="mi">000</a>');
         let tablebody = table.childNodes[1];
-        //let tr = document.createElement("tr");
-        //tr.id = "myclock";
-        tablebody.insertBefore(clock, table.childNodes[0]);
+        let tr = document.createElement("tr");
+        tr.id = "myclock";
+        tablebody.insertBefore(tr, table.childNodes[0]);
         
         //let td = document.createElement("td");
         //td.id = "mycontent";
@@ -38,12 +38,12 @@ function updateClock() {
     document.getElementById(tags[i]).firstChild.nodeValue = corr[i];
 }
 
-function initClock() {
+function main() {
   insertClock();
   //updateClock();
   //window.setInterval("updateClock()", 1);
 }
 
-initClock();
+main();
 
 // END CLOCK SCRIPT
