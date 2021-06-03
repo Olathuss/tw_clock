@@ -40,9 +40,8 @@ function updateClock() {
 
 function initClock() {
   insertClock();
-  document.getElementById("content").innerHTML += clock;
-  updateClock();
-  window.setInterval("updateClock()", 1);
+  //updateClock();
+  //window.setInterval("updateClock()", 1);
 }
 
 initClock();
